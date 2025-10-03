@@ -15,5 +15,20 @@ public class PhoneNumberGenerator {
         
         // TODO: Format and display phone number as XXX-XXX-XXX
         // Include the dashes in the output
+
+        Random rand = new Random();
+
+        int dig1 = rand.nextInt(8);
+        int dig2 = rand.nextInt(8);
+        int dig3 = rand.nextInt(8);
+        String firstGroup = "" + dig1 + dig2 + dig3;
+
+        int secondGroupNum = rand.nextInt(743);
+        String secondGroup = String.format("%03d", secondGroupNum);
+
+        int thirdGroupNum = rand.nextInt(1000);
+        String thirdGroup = String.format("%03d", thirdGroupNum);
+
+        System.out.println(firstGroup + "-" + secondGroup + "-" + thirdGroup);
     }
 }
